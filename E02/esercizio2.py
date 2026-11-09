@@ -1,0 +1,12 @@
+import numpy as np
+n1=int(input('inserisci un numero intero'))
+n2=int(input('inserisci il numero di bit a cui vuoi applicare le operazioni di bit shift'))
+print('rappresentazione binaria del numero',bin(n1))
+print('rappresentazione esadecimale del numero',hex(n1))
+bplus= (n1 << n2)
+bminus=(n1 >> n2)
+print('operazione <<, binario :{:}'.format(bin(bplus)))
+print('operazione >>,binario :{:}'.format(bin(bminus)))
+print('operazione <<, esadecimale :{:}'.format(hex(bplus)))
+print('operazione >>,esadecimale :{:}'.format(hex(bminus)))
+

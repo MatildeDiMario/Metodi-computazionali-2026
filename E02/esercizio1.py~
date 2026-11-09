@@ -1,0 +1,12 @@
+import numpy as np
+n1=int(input('inserisci un primo numero intero'))
+n2=int(input('inserisci un secondo numero intero'))
+print('rappresentazione binaria primo numero',bin(n1))
+print('rappresentazione binaria secondo numero',bin(n2))
+print('rappresentazione esadecimale primo numero',hex(n1))
+print('rappresentazione esadecimale secondo numero',hex(n2))
+n= max(n1.bit_length(),n2.bit_length(),1)
+print('bitwise OR and AND')
+print('n1|n2:' bin(n1|n2))
+print('n1&n2:',bin(n1&n2))
+
