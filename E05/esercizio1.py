@@ -1,0 +1,49 @@
+import numpy as np
+import sys
+import scipy
+import matplotlib.pyplot as plt
+from matplotlib import transforms
+def funz(x):
+    y=(3/1000)*(x**2)
+    return y
+def funznorm(x):
+    y=funz(x)*(10/3)
+    return y
+
+xf=np.arange(0,10,0.01)
+yf=funznorm(xf)
+plt.plot(xf,yf)
+plt.show()
+nsample=10000
+xhm=np.random.uniform(low=0, high=10, size=nsample)
+yhm=np.random.random(nsample)
+plt.scatter(xhm,yhm,marker='.', color='royalblue')
+plt.xlabel('Hit or miss X')
+plt.ylabel('Hit or miss Y')
+maskhm= yhm<=funz(xhm)
+xdistq=xhm[maskhm]
+plt.scatter(xhm[maskhm],yhm[maskhm],marker='.', color='tomato')
+plt.xlabel('Hit or Miss selected X')
+plt.ylabel('Hit or miss selected y')
+plt.hist(xhm, bins=100,range=(0,10), color='darkorange',label='Valori di X generati')
+plt.hist(xdistq, bins=100, range=(0,10), color='lightgreen', label='Valori X selezionati')
+plt.xlabel('X')
+plt.legend()
+plt.show()
+
+def Cinv(x):
+    y=(1000*x)**(1/3)
+    return y
+xcum=Cinv(yhm)
+plt.hist(xcum, bins=100, range=(0,10), color='tomato', label='Cumulativa')
+plt.hist(xdistq, bins=100, range=(0,10), color='lightgreen', label='Hit ot miss')
+plt.xlabel('X')
+plt.ylabel('distribuzione f(x)')
+plt.legend()
+plt.show()
+
+
+
+
+
+
