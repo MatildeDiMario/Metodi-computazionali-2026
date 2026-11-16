@@ -1,0 +1,12 @@
+import sys,os
+import numpy as np
+sys.path.append('/home/matilde/MCF/Metodi-computazionali-2026/E04')
+import somme
+n1=somme.s(5)
+print('somme',n1)
+n2=somme.sommarad(5)
+print('somme quad',n2)
+n3,n4=somme.sp(5)
+print('somme e prodotti',n3,n4)
+n5=somme.sexp(5)
+print('somma esponenziali',n5)

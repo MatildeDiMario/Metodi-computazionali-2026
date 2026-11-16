@@ -1,0 +1,7 @@
+import sys,os
+import numpy as np
+sys.path.append('/home/matilde/MCF/Metodi-computazionali-2026/E04')
+import somme
+n=somme.somma(5)
+print(n)
+
